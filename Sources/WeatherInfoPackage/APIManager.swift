@@ -34,7 +34,7 @@ public class APIManager {
                     return
                 }
                 do {
-                    //Decoding JSON
+                    //Decoding JSON into a decodable object
                     let items = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(items))
                 } catch {
